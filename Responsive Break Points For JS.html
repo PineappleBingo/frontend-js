@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .container{
+            position: relative;
+            min-height: 90vh;
+            max-height: 100%;
+            height: 100%;
+        }
+        .box{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 250px;
+            height: 250px;
+            border: 1px solid #666;
+            border-radius: 5px;
+            display: flex;
+            align-items: flex-end;
+            text-align: center;
+
+            /* background: #666;
+            default color */
+        
+        }
+        span{
+            background: #666;
+            color: #fff;
+            display: inline-block;
+            width: 100%;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+          
+        
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box">
+            
+            <span id="demo"></span>
+        </div>
+    </div>
+
+<script>
+
+    function ResponsiveBrowser() { 
+        
+        var box = document.getElementsByClassName("box");
+        var windowSize = window.outerWidth;
+
+        if (windowSize > 332 && windowSize <= 414 ) {
+            Array.from ( box ). forEach (((i) => { i.style.background = "#ED553B"; }));
+            
+        } else if (windowSize > 414 && windowSize <= 768){
+            Array.from ( box ). forEach (((i) => { i.style.background = "#F6D55C"; }));
+
+        } else if (windowSize > 768 && windowSize <= 1440){
+            Array.from ( box ). forEach (((i) => { i.style.background = "#3CAEA3"; }));
+
+        } else if (windowSize > 1440){
+            Array.from ( box ). forEach (((i) => { i.style.background = "#173F5F"; }));
+
+        } else{
+            Array.from ( box ). forEach (((i) => { i.style.background = "#20639B"; }));
+        }
+
+        var txt = "Window size: width=" + windowSize + "px";
+        document.getElementById("demo").innerHTML = txt;
+    }
+
+ResponsiveBrowser()
+window.onresize = ResponsiveBrowser
+
+</script>
+
+</body>
+</html>
