@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>PDF links to open in a new windows</title>
+  <style>
+
+    body{
+      background: #000;
+      color: #fff;
+      font-size: 30px;
+    }
+
+    .external-link{
+      color: #ff0;
+    }
+    p{
+      color: #fff;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="content-box">
+    <ul>
+      <li><a href="https://wordpress.pdf">Wordpress</a></li>
+      <li><a href="https://Facebook.com">Facebook</a></li>
+      <li><a href="https://twitter.com" name="mylink">Twitter</a></li>
+      <li><a href="https://google.com" target="_blank">Google</a></li>
+    </ul>
+  </div>
+
+  <p id="demo"></p>
+  <script>
+
+
+    $(documnet).ready(function(){
+
+      $('a[href$=".pdf"]').
+
+
+    });
+
+
+  var x = document.getElementsByTagName("a");
+  var y = document.getElementsByTagName("a")[3].getAttribute("href");
+  document.getElementById("demo").innerHTML = y[3];
+
+  // for (var i = 0; i < x.length; i++) {
+  //   if(x[i].target == "_blank"){
+  //     x[i].style.color = "orange";
+  //   }
+
+
+  // for (var i = 0; i < y.length; i++) {
+  //     var y = document.getElementsByTagName("a")[i].getAttribute("href");
+  //     document.getElementById("demo").innerHTML = y[i];
+  // }
+
+  // opt1.
+  // include() is not supported in IE11 (and earlier version)
+  function myFunction() {
+    var str = "Hello world, welcome to the universe.";
+    var n = str.includes("world");
+    document.getElementById("demo").innerHTML = n;
+  }
+
+  // Maybe I can get href value, and serach for .pdf in the end.
+
+
+  // op2.
+  // i Can use jQuery to impleament
+  // $(document).ready(function(){
+  // $("input[name*='nation']").css("background-color", "yellow");
+  // });
+
+  // now how to get attribute = .pdf???
+
+      make_external_link1.setAttribute("color", "orange");
+
+  // var make_external_link = document.querySelector('a[href$=".pdf"]');
+  //     make_external_link.setAttribute("target", "_blank") ;
+  //     make_external_link.setAttribute("class", "external-link");
+
+//  var select_link = document.querySelector('li');
+  //    select_link.setAttribute("class", "selected");
+
+  //    .attribute["href$=.pdf"]
+
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+</body>
+</html>
